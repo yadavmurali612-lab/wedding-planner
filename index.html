@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Connectivity</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏫 Campus Connectivity Checker</h1>
+    <p>Find out which buildings can be reached from the Main Gate.</p>
+
+    <div class="card">
+
+        <h2>🏢 Campus Buildings</h2>
+
+        <div class="buildings">
+            <div>🚪 Main Gate</div>
+            <div>📚 Library</div>
+            <div>💻 CSE Block</div>
+            <div>🔬 ECE Block</div>
+            <div>🍴 Cafeteria</div>
+            <div>🏠 Hostel</div>
+        </div>
+
+        <h2>🛣️ Add Walkway</h2>
+
+        <div class="route">
+            <select id="from">
+                <option value="">From Building</option>
+                <option>Main Gate</option>
+                <option>Library</option>
+                <option>CSE Block</option>
+                <option>ECE Block</option>
+                <option>Cafeteria</option>
+                <option>Hostel</option>
+            </select>
+
+            <span>➡️</span>
+
+            <select id="to">
+                <option value="">To Building</option>
+                <option>Main Gate</option>
+                <option>Library</option>
+                <option>CSE Block</option>
+                <option>ECE Block</option>
+                <option>Cafeteria</option>
+                <option>Hostel</option>
+            </select>
+
+            <button onclick="addRoute()">Add Walkway</button>
+        </div>
+
+        <h3>Current Walkways</h3>
+        <div id="routes">No walkways added</div>
+
+        <button class="check" onclick="checkCampus()">
+            🔍 Check Campus Connectivity
+        </button>
+
+    </div>
+
+    <div id="result" class="result"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

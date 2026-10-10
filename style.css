@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef4ff;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #164e9c;
+    font-size: 36px;
+}
+
+p {
+    text-align: center;
+    color: #555;
+    font-size: 18px;
+}
+
+.card,
+.result {
+    background: white;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #ccd;
+}
+
+h2 {
+    color: #164e9c;
+    margin-top: 10px;
+}
+
+.buildings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.buildings div {
+    background: #e8f0ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+select {
+    padding: 13px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    font-size: 16px;
+    flex: 1;
+}
+
+button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #174fc0;
+}
+
+#routes {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 30px;
+}
+
+.routeItem {
+    padding: 8px;
+    margin: 5px;
+    background: #dbeafe;
+    border-radius: 6px;
+}
+
+.check {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 18px;
+    background: #16a34a;
+}
+
+.check:hover {
+    background: #128238;
+}
+
+.success {
+    color: #15803d;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.failure {
+    color: #dc2626;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.buildingResult {
+    display: inline-block;
+    padding: 12px 18px;
+    margin: 7px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.reachable {
+    background: #bbf7d0;
+    color: #166534;
+}
+
+.unreachable {
+    background: #fecaca;
+    color: #991b1b;
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .buildings {
+        grid-template-columns: 1fr;
+    }
+
+    .route {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    select,
+    .route button {
+        width: 100%;
+    }
+}
